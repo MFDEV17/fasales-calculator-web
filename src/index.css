@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-content {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.gradient-content::before {
+  content: '';
+  background: linear-gradient(to right, #FF004DA8, #0029FFA8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: -1.7px;
+  border-radius: 21px;
+}
