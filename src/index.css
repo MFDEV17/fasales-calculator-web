@@ -20,3 +20,11 @@
   margin: -1.7px;
   border-radius: 21px;
 }
+
+.shadow-top {
+  box-shadow: 0 -3px 5px -5px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-bottom {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.15);
+}
