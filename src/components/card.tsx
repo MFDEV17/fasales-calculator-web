@@ -1,4 +1,4 @@
-import sneakers from "../assets/sneakers.png";
+import sneakers from "../assets/images/sneakers.png";
 import LinkIcon from "../assets/icons/link-icon.tsx";
 import TrashIcon from "../assets/icons/trash-icon.tsx";
 

@@ -1,5 +1,5 @@
-import image from "../../assets/sneakers.png";
-import sadFace from "../../assets/sad-face.png";
+import image from "../../assets/images/sneakers.png";
+import sadFace from "../../assets/images/sad-face.png";
 import PencilIcon from "../../assets/icons/pencil-icon.tsx";
 import { Input } from "../input.tsx";
 import CheckIcon from "../../assets/icons/check-icon.tsx";

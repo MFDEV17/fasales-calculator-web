@@ -1,4 +1,4 @@
-import shakingHand from "../assets/shaking-hand.png";
+import shakingHand from "../assets/images/shaking-hand.png";
 
 const GreetingsPage = () => {
   return (

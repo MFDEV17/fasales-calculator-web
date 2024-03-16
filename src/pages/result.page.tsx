@@ -1,4 +1,4 @@
-import indexFinger from "../assets/index-finger.png";
+import indexFinger from "../assets/images/index-finger.png";
 import ArrowDownIcon from "../assets/icons/arrow-down-icon.tsx";
 
 const ResultPage = () => {

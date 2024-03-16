@@ -1,4 +1,4 @@
-import voucher from "../assets/voucher.png";
+import voucher from "../assets/images/voucher.png";
 import CopyIcon from "../assets/icons/copy-icon.tsx";
 
 const OrderPage = () => {

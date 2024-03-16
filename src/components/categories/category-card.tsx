@@ -1,4 +1,4 @@
-import category from "../../assets/sneakers.png";
+import category from "../../assets/images/sneakers.png";
 
 const CategoryCard = () => {
   return (
