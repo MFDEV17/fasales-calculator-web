@@ -3,7 +3,6 @@ import { useDialog } from "../../service/hooks/use-dialog.tsx";
 import ArrowDownIcon from "../../assets/icons/arrow-down-icon.tsx";
 import CloseIcon from "../../assets/icons/close-icon.tsx";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
-import { useEffect, useState } from "react";
 
 const DialogRoot = () => {
   const { currentContent } = useDialog();
@@ -25,7 +24,7 @@ const DialogRoot = () => {
               <CloseIcon className="size-7" />
             </Dialog.Close>
           </Dialog.Title>
-          <ScrollArea.Root className="relative max-h-[500px] min-h-[500px] overflow-scroll">
+          <ScrollArea.Root className="scrollbar-hide relative max-h-[450px] min-h-[300px] overflow-scroll">
             <ScrollArea.Viewport className="h-full w-full rounded">
               {currentContent}
             </ScrollArea.Viewport>

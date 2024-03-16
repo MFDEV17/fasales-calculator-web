@@ -10,8 +10,8 @@ export const useDialog = () => {
   const { goToNextStep, goToPrevStep, reset } = helpers;
 
   const [map] = useMap<number, JSX.Element>([
-    [1, <StepCategoryChoice />],
-    [2, <StepCreateCart />],
+    [2, <StepCategoryChoice />],
+    [1, <StepCreateCart />],
     [3, <StepBannedItems />],
   ]);
 

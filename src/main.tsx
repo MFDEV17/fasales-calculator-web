@@ -7,7 +7,6 @@ import CartsPage from "./pages/carts.page.tsx";
 import OrderPage from "./pages/order.page.tsx";
 import ResultPage from "./pages/result.page.tsx";
 import StatusBar from "./components/status-bar.tsx";
-import TestPage from "./pages/test.page.tsx";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +22,6 @@ const router = createBrowserRouter([
         ],
       },
       { element: <OrderPage />, path: "order" },
-      { element: <TestPage />, path: "test" },
     ],
   },
 ]);
