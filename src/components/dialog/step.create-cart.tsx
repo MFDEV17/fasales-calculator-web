@@ -10,7 +10,7 @@ const StepCreateCart = () => {
     <div>
       <div
         className={cn(
-          "fixed flex h-full max-h-[450px] min-h-[300px] w-full flex-col items-center space-y-6 overflow-y-scroll bg-white p-6",
+          "fixed flex h-full max-h-[450px] min-h-[300px] w-full flex-col items-center space-y-6 overflow-y-scroll bg-white p-6 scrollbar-hide",
         )}
       >
         <img src={sadFace} alt="" className="size-[12rem]" />
