@@ -3,11 +3,20 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        gridTemplateColumns: {
+          2: "repeat(2, minmax(5.75rem, 5.75rem))",
+          3: "repeat(3, minmax(5.75rem, 5.75rem))",
+          4: "repeat(4, minmax(5.75rem, 5.75rem))",
+          5: "repeat(5, minmax(5.75rem, 5.75rem))",
+        },
+      },
       fontSize: {
         "4.5xl": ["3rem", "3rem"],
       },
       screens: {
-        md: "320px",
+        sm: "320px",
+        md: "340px",
         lg: "396px",
         xl: "768px",
       },

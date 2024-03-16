@@ -3,6 +3,7 @@ import { useDialog } from "../../service/hooks/use-dialog.tsx";
 import ArrowDownIcon from "../../assets/icons/arrow-down-icon.tsx";
 import CloseIcon from "../../assets/icons/close-icon.tsx";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
+import { useEffect, useState } from "react";
 
 const DialogRoot = () => {
   const { currentContent } = useDialog();
@@ -15,24 +16,29 @@ const DialogRoot = () => {
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0 bg-gray-700/75" />
-        <Dialog.Content className="data-[state=open]:animate-contentShow fixed left-[50%] top-[50%] max-h-[85vh] w-full max-w-screen-lg translate-x-[-50%] translate-y-[-50%] rounded-xl bg-test-bg focus:outline-none z-[100]">
-          <Dialog.Title className="shadow-bottom flex w-full items-center justify-between rounded-t-xl bg-test-bg p-4 font-medium text-test-hint">
+        <Dialog.Overlay className="fixed inset-0 bg-black/50 data-[state=closed]:animate-[dialog-overlay-hide_400ms] data-[state=open]:animate-[dialog-overlay-show_400ms]" />
+        <Dialog.Content className="fixed left-[50%] top-[50%] z-[100] w-[90%] max-w-screen-lg translate-x-[-50%] translate-y-[-50%] rounded-3xl bg-test-bg focus:outline-none data-[state=closed]:animate-[dialog-content-hide_300ms] data-[state=open]:animate-[dialog-content-show_300ms]">
+          <Dialog.Title className="shadow-bottom flex w-full items-center justify-between rounded-t-3xl bg-test-bg p-4 font-medium text-test-hint">
             <ArrowDownIcon className="rotate-90 text-test-button" />
             <p>Добавление товара</p>
-            <CloseIcon className="size-7" />
+            <Dialog.Close className="outline-none">
+              <CloseIcon className="size-7" />
+            </Dialog.Close>
           </Dialog.Title>
-          <ScrollArea.Root className="h-[80vh] overflow-hidden rounded">
+          <ScrollArea.Root className="relative max-h-[500px] min-h-[500px] overflow-scroll">
             <ScrollArea.Viewport className="h-full w-full rounded">
               {currentContent}
             </ScrollArea.Viewport>
             <ScrollArea.Scrollbar
-              className="bg-blackA3 hover:bg-gray-500/50 flex touch-none select-none p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=horizontal]:h-2.5 data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col"
+              className="bg-blackA3 flex touch-none select-none p-0.5 transition-colors duration-[160ms] ease-out hover:bg-gray-500/50 data-[orientation=horizontal]:h-2.5 data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col"
               orientation="vertical"
             >
-              <ScrollArea.Thumb className="bg-red-400 relative flex-1 rounded-[10px] before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:w-full before:min-w-[44px] before:-translate-x-1/2 before:-translate-y-1/2 before:content-['']" />
+              <ScrollArea.Thumb className="relative flex-1 rounded-[10px] before:absolute before:left-1/2 before:top-1/2 before:h-full before:min-h-[44px] before:w-full before:min-w-[44px] before:-translate-x-1/2 before:-translate-y-1/2 before:content-['']" />
             </ScrollArea.Scrollbar>
           </ScrollArea.Root>
+          <div className="shadow-top p-4 text-center text-sm text-test-hint">
+            Выберите категорию товара
+          </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
