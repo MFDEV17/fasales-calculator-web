@@ -15,11 +15,11 @@ export type StoreState = {
   orderDeliveryMethod?: DeliveryMethod;
   orderDeliveryPrice: number;
 
-  cards: Card[];
-  createCard: (card: Card) => void;
+  cards: StoreCard[];
+  createCard: (card: StoreCard) => void;
 };
 
-export type Card = CardSchema & {
+export type StoreCard = CardSchema & {
   cardId: string;
   cardCount: number;
 

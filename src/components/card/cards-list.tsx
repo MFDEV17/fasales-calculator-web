@@ -8,7 +8,7 @@ export const CardsList = () => {
     <div className="bg-test-secondary px-3 py-4">
       <div className="space-y-2 pb-10">
         {cards.map((card) => (
-          <Card key={card.cardId} />
+          <Card key={card.cardId} {...card} />
         ))}
       </div>
     </div>
