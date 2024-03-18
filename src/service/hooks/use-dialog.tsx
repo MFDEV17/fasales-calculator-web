@@ -49,6 +49,5 @@ export const useDialog = () => {
     goToPrevStep,
     goToNextStep,
     reset,
-    currentStep,
   };
 };
