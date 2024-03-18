@@ -7,6 +7,9 @@ import CartsPage from "./pages/carts.page.tsx";
 import OrderPage from "./pages/order.page.tsx";
 import ResultPage from "./pages/result.page.tsx";
 import StatusBar from "./components/status-bar.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -27,5 +30,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />,
+  <QueryClientProvider client={queryClient}>
+    <RouterProvider router={router} />,
+  </QueryClientProvider>,
 );
